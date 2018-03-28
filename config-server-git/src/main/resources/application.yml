@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/codeFarmerCZX/spring-cloud-config-demo.git
+server:
+  port: 1201
