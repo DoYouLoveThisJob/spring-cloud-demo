@@ -13,6 +13,34 @@
         <version>Dalston.SR1</version>
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
+    <modules>
+        <module>api-gateway</module>
+        <module>api-gateway-dynamic-route</module>
+        <module>config-client</module>
+        <module>config-server-git</module>
+        <module>consumer-ribbon-hystrix</module>
+        <module>eureka-client1</module>
+        <module>eureka-client2</module>
+        <module>eureka-consumer</module>
+        <module>eureka-consumer-feign</module>
+        <module>eureka-consumer-ribbon</module>
+        <module>eureka-server</module>
+        <module>eureka-server2</module>
+        <module>hystrix-dashboard</module>
+        <module>rabbitmq-hello</module>
+        <module>stream-hello</module>
+        <module>stream-sink-receiver</module>
+        <module>stream-sink-receiver2</module>
+        <module>stream-sink-sender</module>
+        <module>thrift-demo</module>
+        <module>trace-1</module>
+        <module>trace-2</module>
+        <module>turbine-amqp</module>
+        <module>turbine-http</module>
+        <module>zipkin-server</module>
+        <module></module>
+
+    </modules>
     <build>
         <plugins>
             <plugin>
