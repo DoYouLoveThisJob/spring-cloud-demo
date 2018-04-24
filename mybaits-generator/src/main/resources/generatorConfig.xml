@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+<!-- 数据库驱动-->
+	<!--<classPathEntry	location="mysql-connector-java-5.1.44.jar"/>-->
+	<context id="DB2Tables"	targetRuntime="MyBatis3">
+		<!--<commentGenerator>-->
+			<!--<property name="suppressDate" value="true"/>-->
+			<!--&lt;!&ndash; 是否去除自动生成的注释 true：是 ： false:否 &ndash;&gt;-->
+			<!--<property name="suppressAllComments" value="true"/>-->
+		<!--</commentGenerator>-->
+
+		<commentGenerator type="com.czx.mybatis.generator.MyCommentGenerator">
+			<property name="suppressDate" value="true"/>
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="false"/>
+		</commentGenerator>
+
+		<!--数据库链接URL，用户名、密码 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost/sinaif_king" userId="root" password="root">
+		</jdbcConnection>
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false"/>
+		</javaTypeResolver>
+		<!-- 生成模型的包名和位置-->
+		<javaModelGenerator targetPackage="com.sinaif.king.model.app" targetProject="C:\Users\czx\IdeaProjects\spring-cloud-demo\mybaits-generator\src\main\java">
+			<property name="enableSubPackages" value="true"/>
+			<property name="trimStrings" value="true"/>
+		</javaModelGenerator>
+		<!-- 生成映射文件的包名和位置-->
+		<sqlMapGenerator targetPackage="com.sinaif.king.dao.app.mapping" targetProject="C:\Users\czx\IdeaProjects\spring-cloud-demo\mybaits-generator\src\main\java">
+			<property name="enableSubPackages" value="true"/>
+		</sqlMapGenerator>
+		<!-- 生成DAO的包名和位置-->
+		<javaClientGenerator type="XMLMAPPER" targetPackage="com.sinaif.king.dao.app" targetProject="C:\Users\czx\IdeaProjects\spring-cloud-demo\mybaits-generator\src\main\java">
+			<property name="enableSubPackages" value="true"/>
+		</javaClientGenerator>
+		<!-- 要生成哪些表-->
+		<table tableName="t_app_user_status" domainObjectName="AppUserStatusBean" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		<table tableName="t_app_user_status_changerecord" domainObjectName="AppUserStatusChangeRecordBean" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		<table tableName="t_app_applyloan_record_base" domainObjectName="AppApplyloanRecordBaseBean" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		<table tableName="t_app_applyloan_record" domainObjectName="AppApplyloanRecordBean" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		<table tableName="t_app_agreement_record" domainObjectName="AppAgreementRecordBean" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		<table tableName="t_app_withdraw_req" domainObjectName="AppWithdrawReqBean" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		<table tableName="t_app_repayment_req" domainObjectName="AppRepaymentReqBean" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		<table tableName="t_app_req_device" domainObjectName="AppReqDeviceBean" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		<table tableName="t_app_user_tempevent" domainObjectName="AppUserTempEventBean" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		<table tableName="t_app_increasetrust_config" domainObjectName="AppIncreaseTrustConfigBean" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		<table tableName="t_app_increasetrust_user" domainObjectName="AppIncreaseTrustUserBean" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+	</context>
+</generatorConfiguration>

@@ -6,6 +6,7 @@
 
     <groupId>Spring</groupId>
     <artifactId>SpringCloudDemo</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <parent>
         <groupId>org.springframework.cloud</groupId>
@@ -38,7 +39,8 @@
         <module>turbine-amqp</module>
         <module>turbine-http</module>
         <module>zipkin-server</module>
-        <module></module>
+        <module>thread-learning</module>
+        <module>mybaits-generator</module>
 
     </modules>
     <build>
